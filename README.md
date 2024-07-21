@@ -1,20 +1,22 @@
-<<<<<<< HEAD
-# food_delivery_app
-=======
+
 # food_delivery_app
 
-A new Flutter project.
+![Splash_screen1](https://github.com/user-attachments/assets/d1303f8a-b5b4-40c7-86e5-c4080fa046b5)
 
-## Getting Started
+![Splash_screen2](https://github.com/user-attachments/assets/1550ca22-0e7b-442c-8430-1a8bbd684bd7)
 
-This project is a starting point for a Flutter application.
+![Walkthrough1](https://github.com/user-attachments/assets/5ad3e912-ca2f-4041-872e-89779fa2f05b)
 
-A few resources to get you started if this is your first Flutter project:
+![Walkthrough2](https://github.com/user-attachments/assets/b5379ac4-7aa2-4746-bdb4-5c20e5946f8e)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Walkthrough3](https://github.com/user-attachments/assets/2a026363-9b40-40fb-9192-bd92dba0a01a)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> c05c651 (upload project)
+![login_page](https://github.com/user-attachments/assets/8a50f5cc-6ce9-4905-815e-238a68470b74)
+
+![OTP_Verification](https://github.com/user-attachments/assets/7f7ff053-4cba-46ce-a1b9-f7d3fa92cd0d)
+
+![Onboarding](https://github.com/user-attachments/assets/64d860ae-3e57-4f54-95e2-e739c1e9c89d)
+
+![HomePage](https://github.com/user-attachments/assets/5d2215cc-6306-4d9a-9f24-3ed4375eed5a)
+
+
