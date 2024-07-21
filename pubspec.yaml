@@ -73,6 +73,10 @@ flutter:
     - assets/login_page_shape.svg
     - assets/back_btn.svg
     - assets/green_tick.svg
+    - assets/location_icon.svg
+    - assets/play_icon.svg
+    - assets/ScrollCard_img.png
+    - assets/ScrollCard_img1.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

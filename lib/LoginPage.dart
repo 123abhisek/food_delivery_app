@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_delivery_app/OTP_Verification.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -61,7 +62,7 @@ class LoginPage extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontFamily: 'Lexend',
-                          fontSize: 14,
+                          fontSize: 18,
                           color: Colors.black87,
                         ),
                         textAlign: TextAlign.left,
@@ -88,7 +89,7 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(width: 8,),
+                            SizedBox(width: 12,),
                             Expanded(
                               child: TextField(
                                 keyboardType: TextInputType.phone,
@@ -106,7 +107,11 @@ class LoginPage extends StatelessWidget {
                         width: 400,
                         height: 50,
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (context) => OTP_Verification())
+                            );
+                          },
                           child: Text(
                             'Submit',
                             style: TextStyle(
@@ -118,6 +123,9 @@ class LoginPage extends StatelessWidget {
                           ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFF6318AF),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
                       ),
@@ -135,8 +143,8 @@ class LoginPage extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'Lexend',
                           fontWeight: FontWeight.w300,
-                          fontSize: 13,
-                          color: Color(0xFF7B7B7B),
+                          fontSize: 15,
+                          color: Colors.black,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -146,7 +154,8 @@ class LoginPage extends StatelessWidget {
                           fontFamily: 'Lexend',
                           fontWeight: FontWeight.w300,
                           fontSize: 15,
-                          color: Color(0xFF7B7B7B),
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
                         ),
                         textAlign: TextAlign.center,
                       ),
