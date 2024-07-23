@@ -84,10 +84,10 @@ class HomeScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(height: 20),
                       ],
                     ),
                   ),
+                  SizedBox(height: 20),
                   Container(
                     height: 200, // Height of the horizontal scroll area
                     child: ListView(
@@ -98,14 +98,65 @@ class HomeScreen extends StatelessWidget {
                               'the taste of our delicious '
                               'food!',
                           text1: 'FIRST',
-                          icon:'assets/ScrollCard_img.png',
-                        ),// Space between cards
+                          icon: 'assets/ScrollCard_img.png',
+                        ), // Space between cards
                         ScrollCard(
                           text: 'Enjoy your first order, '
                               'the taste of our delicious '
                               'food!',
                           text1: 'SECOND',
-                          icon:'assets/ScrollCard_img1.png',
+                          icon: 'assets/ScrollCard_img1.png',
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    child: TextField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        labelText: 'Search food or events',
+                        border: OutlineInputBorder(), // Add an outline border
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.search),
+                          onPressed: () {
+                            // Define the search action here
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Text(
+                            "Start crafting",
+                            style: TextStyle(
+                              fontFamily: 'Lexend',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                              color: Color(0xFF6318AF),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            CraftingCard(
+                              text : "Default Platters",
+                              img : "assets/crafting_img1.png"
+                            ),
+                            CraftingCard(
+                                text : "Craft Your Own",
+                                img : "assets/crafting_img2.png"
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -126,7 +177,8 @@ class HomeScreen extends StatelessWidget {
           children: [
             buildIconWithLabel(Icons.home, "Home", Colors.deepPurple),
             buildIconWithLabel(Icons.favorite, "Wishlist", Colors.black54),
-            buildIconWithLabel(Icons.food_bank_outlined, "Orders", Colors.black54),
+            buildIconWithLabel(
+                Icons.food_bank_outlined, "Orders", Colors.black54),
             buildIconWithLabel(Icons.person, "Profile", Colors.black54),
           ],
         ),
@@ -175,10 +227,67 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
-
-
 }
+
+class CraftingCard extends StatelessWidget {
+  final String text;
+  final String img;
+
+  const CraftingCard({Key? key, required this.text, required this.img})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    double cardWidth = (MediaQuery.of(context).size.width * 0.5) - 30;
+
+    return Container(
+      height: 140,
+      width: cardWidth,
+      decoration: BoxDecoration(
+        color: Colors.white, // Card background color
+        borderRadius: BorderRadius.circular(10), // Card border radius
+        border: Border.all(color: Colors.grey), // Border color
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3), // Grey shadow color
+            blurRadius: 8, // Shadow blur radius
+            offset: Offset(0, 4), // Shadow offset
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center, // Center content vertically
+        crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10), // Radius for the top-left corner
+              topRight: Radius.circular(10), // Radius for the top-right corner
+            ),
+            child: Image.asset(
+              img, // Replace with your PNG image path
+              fit: BoxFit.cover,
+              width: cardWidth,
+              height: 110,
+            ),
+          ),
+          Center(
+            child: Text(
+              text,
+              textAlign: TextAlign.center, // Center text horizontally
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
 
 
 
@@ -187,14 +296,17 @@ class ScrollCard extends StatelessWidget {
   final String text1;
   final String icon;
 
-  const ScrollCard({Key? key, required this.text, required this.text1, required this.icon})
+  const ScrollCard(
+      {Key? key, required this.text, required this.text1, required this.icon})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 365, // Width of each card
-      margin: EdgeInsets.only(left: 16,), // Add margin to space out cards
+      margin: EdgeInsets.only(
+        left: 16,
+      ), // Add margin to space out cards
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10), // Border radius
         boxShadow: [
@@ -206,7 +318,8 @@ class ScrollCard extends StatelessWidget {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20), // Apply border radius to the image
+        borderRadius:
+        BorderRadius.circular(20), // Apply border radius to the image
         child: Stack(
           children: [
             Image.asset(
