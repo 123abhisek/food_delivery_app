@@ -94,16 +94,14 @@ class HomeScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         ScrollCard(
-                          text: 'Enjoy your first order, '
-                              'the taste of our delicious '
-                              'food!',
+                          text:
+                              'Enjoy your first order, the taste of our delicious food!',
                           text1: 'FIRST',
                           icon: 'assets/ScrollCard_img.png',
-                        ), // Space between cards
+                        ),
                         ScrollCard(
-                          text: 'Enjoy your first order, '
-                              'the taste of our delicious '
-                              'food!',
+                          text:
+                              'Enjoy your first order, the taste of our delicious food!',
                           text1: 'SECOND',
                           icon: 'assets/ScrollCard_img1.png',
                         ),
@@ -144,19 +142,230 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            CraftingCard(
-                              text : "Default Platters",
-                              img : "assets/crafting_img1.png"
+                            Expanded(
+                              child: CraftingCard(
+                                text: "Default Platters",
+                                img: "assets/crafting_img1.png",
+                              ),
                             ),
-                            CraftingCard(
-                                text : "Craft Your Own",
-                                img : "assets/crafting_img2.png"
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: CraftingCard(
+                                text: "Craft Your Own",
+                                img: "assets/crafting_img2.png",
+                              ),
                             ),
                           ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 190, // Fixed height for the ListView
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        MenuCard(
+                          heading: 'Default Menu 1',
+                          img: 'assets/crafting_img2.png',
+                          amount: 777,
+                          min_p: 800,
+                        ),
+                        MenuCard(
+                          heading: 'Default Menu 2',
+                          img: 'assets/crafting_img2.png',
+                          amount: 777,
+                          min_p: 800,
+                        ),
+                        MenuCard(
+                          heading: 'Default Menu 3',
+                          img: 'assets/crafting_img2.png',
+                          amount: 777,
+                          min_p: 800,
+                        ),
+                        MenuCard(
+                          heading: 'Default Menu 4',
+                          img: 'assets/crafting_img2.png',
+                          amount: 777,
+                          min_p: 800,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 190,
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Top Categories",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 20,
+                            fontFamily: "Lexend",
+                          ),
+                        ),
+                        SizedBox(
+                            height:
+                                10), // Add some spacing between title and list
+                        Expanded(
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Categories(
+                                img: 'assets/starter_img.png',
+                                text: "Starters",
+                              ),
+                              Categories(
+                                img: 'assets/drink_img.png',
+                                text: "Starters",
+                              ),
+                              Categories(
+                                img: 'assets/rice_img.png',
+                                text: "Starters",
+                              ),
+                              Categories(
+                                img: 'assets/starter_img.png',
+                                text: "Starters",
+                              ),
+                              Categories(
+                                img: 'assets/drink_img.png',
+                                text: "Starters",
+                              ),
+                              Categories(
+                                img: 'assets/rice_img.png',
+                                text: "Starters",
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 150,
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Starters",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: "Lexend",
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                "More Starters",
+                                style: TextStyle(
+                                  fontFamily: "Lexend",
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF6318AF),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                            height:
+                                10), // Add some spacing between title and list
+                        Expanded(
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              CardItem(
+                                img: 'assets/crafting_img2.png',
+                                text: 'Grill Chicken',
+                              ),
+                              CardItem(
+                                img: 'assets/crafting_img2.png',
+                                text: 'Mashroom Fry',
+                              ),
+                              CardItem(
+                                img: 'assets/crafting_img2.png',
+                                text: 'Veggies Fry',
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 150,
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Main Course",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: "Lexend",
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                "More Main Courses",
+                                style: TextStyle(
+                                  fontFamily: "Lexend",
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF6318AF),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                            height:
+                            10), // Add some spacing between title and list
+                        Expanded(
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              CardItem(
+                                img: 'assets/crafting_img2.png',
+                                text: 'Biryani',
+                              ),
+                              CardItem(
+                                img: 'assets/crafting_img2.png',
+                                text: 'Bread',
+                              ),
+                              CardItem(
+                                img: 'assets/crafting_img2.png',
+                                text: 'Plain Rice',
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -229,6 +438,285 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+class CardItem extends StatelessWidget {
+  final String img;
+  final String text;
+
+  const CardItem({Key? key, required this.text, required this.img})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 180,
+      margin: EdgeInsets.only(left: 20,right: 10),
+      decoration: BoxDecoration(
+        color: Colors.white, // Card background color
+        borderRadius: BorderRadius.circular(10), // Card border radius
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3), // Grey shadow color
+            blurRadius: 8, // Shadow blur radius
+            offset: Offset(0, 4), // Shadow offset
+          ),
+        ],
+      ),
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10), // Radius for the top-left corner
+              topRight: Radius.circular(10), // Radius for the top-right corner
+            ),
+            child: Image.asset(
+              img, // Replace with your PNG image path
+              fit: BoxFit.cover,
+              width: 200,
+              height: 80,
+            ),
+          ),
+          Positioned(
+            bottom: 5,
+            left: 0,
+            right: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
+                ),
+                color: Colors.white
+                    .withOpacity(0.8), // Background color with opacity
+              ),
+              child: Center(
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center, // Center text horizontally
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Categories extends StatelessWidget {
+  final String img;
+  final String text;
+
+  const Categories({
+    Key? key,
+    required this.img,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin:
+          EdgeInsets.symmetric(horizontal: 5), // Add some margin for spacing
+      child: Column(
+        children: [
+          ClipOval(
+            child: Image.asset(
+              img,
+              width:
+                  80, // Ensure width and height are the same for a circular shape
+              height: 80,
+              fit: BoxFit.cover,
+            ),
+          ),
+          SizedBox(height: 5), // Add some spacing between image and text
+          Text(
+            text,
+            style: TextStyle(
+              fontFamily: "Lexend",
+              fontWeight: FontWeight.w400,
+              fontSize: 12,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MenuCard extends StatelessWidget {
+  final String heading;
+  final String img;
+  final int amount;
+  final int min_p;
+  final String fontFamily_vl = "Lexend";
+
+  const MenuCard({
+    Key? key,
+    required this.heading,
+    required this.img,
+    required this.amount,
+    required this.min_p,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: 30),
+      padding: EdgeInsets.all(10), // Add some padding around the card
+      constraints: BoxConstraints(
+        maxWidth: 160,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white, // Card background color
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3), // Grey shadow color
+            blurRadius: 8, // Shadow blur radius
+            offset: Offset(0, 4), // Shadow offset
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            heading,
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 12,
+              fontFamily: fontFamily_vl,
+              color: Colors.black,
+            ),
+          ),
+          SizedBox(height: 10), // Add spacing
+          Container(
+            height: 80, // Height for the Stack
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(
+                  top: 0,
+                  left: -25,
+                  child: ClipOval(
+                    child: Image.asset(
+                      img,
+                      width:
+                          80, // Ensure width and height are the same for a circular shape
+                      height: 80,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "3 starters",
+                        style: TextStyle(
+                          fontFamily: fontFamily_vl,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        "3 maincourse",
+                        style: TextStyle(
+                          fontFamily: fontFamily_vl,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        "3 desserts",
+                        style: TextStyle(
+                          fontFamily: fontFamily_vl,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        "3 drinks",
+                        style: TextStyle(
+                          fontFamily: fontFamily_vl,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 10), // Add spacing
+          Row(
+            children: [
+              Icon(
+                Icons.person,
+                size: 16,
+              ),
+              SizedBox(width: 5),
+              Text(
+                "Min",
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontFamily: fontFamily_vl,
+                  fontSize: 11,
+                ),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                min_p.toString(), // Convert integer to String
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontFamily: fontFamily_vl,
+                  fontSize: 11,
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                "Starts at ₹ ",
+                style: TextStyle(
+                  fontFamily: fontFamily_vl,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF6318AF),
+                ),
+              ),
+              Text(
+                amount.toString(), // Convert integer to String
+                style: TextStyle(
+                  fontFamily: fontFamily_vl,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF6318AF),
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class CraftingCard extends StatelessWidget {
   final String text;
   final String img;
@@ -246,7 +734,7 @@ class CraftingCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white, // Card background color
         borderRadius: BorderRadius.circular(10), // Card border radius
-        border: Border.all(color: Colors.grey), // Border color
+        // border: Border.all(color: Colors.grey), // Border color
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.3), // Grey shadow color
@@ -255,9 +743,7 @@ class CraftingCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center, // Center content vertically
-        crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
+      child: Stack(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.only(
@@ -271,13 +757,28 @@ class CraftingCard extends StatelessWidget {
               height: 110,
             ),
           ),
-          Center(
-            child: Text(
-              text,
-              textAlign: TextAlign.center, // Center text horizontally
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w600,
+          Positioned(
+            bottom: 5,
+            left: 0,
+            right: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
+                ),
+                color: Colors.white
+                    .withOpacity(0.8), // Background color with opacity
+              ),
+              child: Center(
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center, // Center text horizontally
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
             ),
           ),
@@ -286,10 +787,6 @@ class CraftingCard extends StatelessWidget {
     );
   }
 }
-
-
-
-
 
 class ScrollCard extends StatelessWidget {
   final String text;
@@ -304,9 +801,7 @@ class ScrollCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 365, // Width of each card
-      margin: EdgeInsets.only(
-        left: 16,
-      ), // Add margin to space out cards
+      margin: EdgeInsets.only(left: 16), // Add margin to space out cards
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10), // Border radius
         boxShadow: [
@@ -319,7 +814,7 @@ class ScrollCard extends StatelessWidget {
       ),
       child: ClipRRect(
         borderRadius:
-        BorderRadius.circular(20), // Apply border radius to the image
+            BorderRadius.circular(20), // Apply border radius to the image
         child: Stack(
           children: [
             Image.asset(

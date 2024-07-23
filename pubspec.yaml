@@ -79,6 +79,9 @@ flutter:
     - assets/ScrollCard_img1.png
     - assets/crafting_img1.png
     - assets/crafting_img2.png
+    - assets/rice_img.png
+    - assets/drink_img.png
+    - assets/starter_img.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
