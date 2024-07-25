@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -176,25 +179,25 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         MenuCard(
                           heading: 'Default Menu 1',
-                          img: 'assets/crafting_img2.png',
+                          img: 'assets/Menu_img1.png',
                           amount: 777,
                           min_p: 800,
                         ),
                         MenuCard(
                           heading: 'Default Menu 2',
-                          img: 'assets/crafting_img2.png',
+                          img: 'assets/Menu_img1.png',
                           amount: 777,
                           min_p: 800,
                         ),
                         MenuCard(
                           heading: 'Default Menu 3',
-                          img: 'assets/crafting_img2.png',
+                          img: 'assets/Menu_img1.png',
                           amount: 777,
                           min_p: 800,
                         ),
                         MenuCard(
                           heading: 'Default Menu 4',
-                          img: 'assets/crafting_img2.png',
+                          img: 'assets/Menu_img1.png',
                           amount: 777,
                           min_p: 800,
                         ),
@@ -233,23 +236,23 @@ class HomeScreen extends StatelessWidget {
                               ),
                               Categories(
                                 img: 'assets/drink_img.png',
-                                text: "Starters",
+                                text: "Drinks",
                               ),
                               Categories(
                                 img: 'assets/rice_img.png',
-                                text: "Starters",
+                                text: "Rice",
                               ),
                               Categories(
                                 img: 'assets/starter_img.png',
-                                text: "Starters",
+                                text: "Curry",
                               ),
                               Categories(
                                 img: 'assets/drink_img.png',
-                                text: "Starters",
+                                text: "Drink",
                               ),
                               Categories(
                                 img: 'assets/rice_img.png',
-                                text: "Starters",
+                                text: "Rice",
                               ),
                             ],
                           ),
@@ -295,15 +298,19 @@ class HomeScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             children: [
                               CardItem(
-                                img: 'assets/crafting_img2.png',
+                                img: 'assets/starter_more_img1.png',
                                 text: 'Grill Chicken',
                               ),
                               CardItem(
-                                img: 'assets/crafting_img2.png',
+                                img: 'assets/starter_more_img2.jpeg',
                                 text: 'Mashroom Fry',
                               ),
                               CardItem(
-                                img: 'assets/crafting_img2.png',
+                                img: 'assets/starter_more_img2.jpeg',
+                                text: 'Veggies Fry',
+                              ),
+                              CardItem(
+                                img: 'assets/starter_more_img1.png',
                                 text: 'Veggies Fry',
                               ),
                             ],
@@ -347,25 +354,135 @@ class HomeScreen extends StatelessWidget {
                         ),
                         SizedBox(
                             height:
-                            10), // Add some spacing between title and list
+                                10), // Add some spacing between title and list
                         Expanded(
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
                               CardItem(
-                                img: 'assets/crafting_img2.png',
+                                img: 'assets/main_course_img1.jpeg',
                                 text: 'Biryani',
                               ),
                               CardItem(
-                                img: 'assets/crafting_img2.png',
+                                img: 'assets/main_course_img2.jpeg',
                                 text: 'Bread',
                               ),
                               CardItem(
-                                img: 'assets/crafting_img2.png',
+                                img: 'assets/main_course_img3.jpeg',
+                                text: 'Plain Rice',
+                              ),
+                              CardItem(
+                                img: 'assets/main_course_img4.jpeg',
                                 text: 'Plain Rice',
                               ),
                             ],
                           ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(
+                      left: 20,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Services",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "Lexend",
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Container(
+                          height: 400,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              ServiceCard(
+                                img: 'assets/Services_img1.jpeg',
+                                tag: 'Signature',
+                                subTag1: 'High Quality Disposable Cutlery',
+                                subTag2: 'Elegant Decoration & Table Settings',
+                                subTag3: 'Served by Waitstaff',
+                                subTag4:
+                                    'Best for Weddings, Corporate Event...',
+                              ),
+                              ServiceCard(
+                                img: 'assets/Services_img2.jpeg',
+                                tag: 'Signature',
+                                subTag1: 'High Quality Disposable Cutlery',
+                                subTag2: 'Elegant Decoration & Table Settings',
+                                subTag3: 'Served by Waitstaff',
+                                subTag4:
+                                    'Best for Weddings, Corporate Event...',
+                              ),
+                              ServiceCard(
+                                img: 'assets/Services_img3.jpeg',
+                                tag: 'Signature',
+                                subTag1: 'High Quality Disposable Cutlery',
+                                subTag2: 'Elegant Decoration & Table Settings',
+                                subTag3: 'Served by Waitstaff',
+                                subTag4:
+                                    'Best for Weddings, Corporate Event...',
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    child: Column(
+                      children: [
+                        Text(
+                          "How does it work ?",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Lexend",
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/illustrate1.png",
+                              width: 112,
+                              height: 86,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  "Customize Menu",
+                                  style: TextStyle(
+                                    fontFamily: "Lexend",
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16,
+                                    color: Color(0xFF6318AF),
+                                  ),
+                                ),
+                                Text(
+                                  "Select items for a single event or multiple events",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 14,
+                                    fontFamily: "Lexend",
+                                    color: Color(0xFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -438,6 +555,214 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+class ServiceCard extends StatelessWidget {
+  final String img;
+  final String tag;
+  final String subTag1;
+  final String subTag2;
+  final String subTag3;
+  final String subTag4;
+
+  const ServiceCard({
+    Key? key,
+    required this.img,
+    required this.subTag1,
+    required this.subTag2,
+    required this.subTag3,
+    required this.subTag4,
+    required this.tag,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 0.8,
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.only(right: 30),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.6),
+                blurRadius: 8,
+                offset: Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: Image.asset(
+                  img, // Replace with your PNG image path
+                  fit: BoxFit.cover,
+                  width: 300,
+                  height: 150,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/Signature_svg.png',
+                    width: 20,
+                    height: 20,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    tag,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Lexend",
+                      color: Color(0xFF6318AF),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Signature_subIcon.svg",
+                    height: 12,
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    subTag1,
+                    style: TextStyle(
+                      fontFamily: "Lexend",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Signature_subIcon.svg",
+                    height: 12,
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    subTag2,
+                    style: TextStyle(
+                      fontFamily: "Lexend",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Signature_subIcon.svg",
+                    height: 12,
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    subTag3,
+                    style: TextStyle(
+                      fontFamily: "Lexend",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Signature_subIcon.svg",
+                    height: 12,
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    subTag4,
+                    style: TextStyle(
+                      fontFamily: "Lexend",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Center(
+                child: Text(
+                  "Know More",
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Lexend",
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          top: 0,
+          right: 30,
+          child: Container(
+            padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+            decoration: BoxDecoration(
+              color: Color(0xFF6318AF),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(5),
+                bottomLeft: Radius.circular(5),
+              ),
+            ),
+            child: Text(
+              "Recommended",
+              style: TextStyle(
+                fontFamily: "Lexend",
+                fontWeight: FontWeight.w400,
+                fontSize: 15,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 class CardItem extends StatelessWidget {
   final String img;
   final String text;
@@ -449,7 +774,7 @@ class CardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 180,
-      margin: EdgeInsets.only(left: 20,right: 10),
+      margin: EdgeInsets.only(left: 20, right: 10),
       decoration: BoxDecoration(
         color: Colors.white, // Card background color
         borderRadius: BorderRadius.circular(10), // Card border radius

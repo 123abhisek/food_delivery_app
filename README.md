@@ -17,6 +17,6 @@
 
 ![Onboarding](https://github.com/user-attachments/assets/64d860ae-3e57-4f54-95e2-e739c1e9c89d)
 
-![HomePage](https://github.com/user-attachments/assets/5d2215cc-6306-4d9a-9f24-3ed4375eed5a)
+![HomePage](https://github.com/user-attachments/assets/18b8d1ae-8b02-4253-bced-315ad82cc7fe)
 
-![](../../Abhishek/Project/App_project_output/food_delivery_app/HomePage1.png)
+![HomePage1](https://github.com/user-attachments/assets/b3717ea5-1078-4757-bc85-ea180d285d9f)

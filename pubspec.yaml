@@ -82,6 +82,18 @@ flutter:
     - assets/rice_img.png
     - assets/drink_img.png
     - assets/starter_img.png
+    - assets/Signature_svg.png
+    - assets/Signature_subIcon.svg
+    - assets/Services_img1.jpeg
+    - assets/Services_img2.jpeg
+    - assets/Services_img3.jpeg
+    - assets/main_course_img1.jpeg
+    - assets/main_course_img2.jpeg
+    - assets/main_course_img3.jpeg
+    - assets/main_course_img4.jpeg
+    - assets/starter_more_img1.png
+    - assets/starter_more_img2.jpeg
+    - assets/Menu_img1.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
