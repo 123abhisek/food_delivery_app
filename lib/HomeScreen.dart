@@ -387,6 +387,7 @@ class HomeScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(
                       left: 20,
+                      bottom: 40,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -439,54 +440,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Text(
-                          "How does it work ?",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Lexend",
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Image.asset(
-                              "assets/illustrate1.png",
-                              width: 112,
-                              height: 86,
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  "Customize Menu",
-                                  style: TextStyle(
-                                    fontFamily: "Lexend",
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 16,
-                                    color: Color(0xFF6318AF),
-                                  ),
-                                ),
-                                Text(
-                                  "Select items for a single event or multiple events",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w300,
-                                    fontSize: 14,
-                                    fontFamily: "Lexend",
-                                    color: Color(0xFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+
                 ],
               ),
             ),
@@ -586,9 +540,10 @@ class ServiceCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.6),
-                blurRadius: 8,
-                offset: Offset(0, 4),
+                color: Colors.grey.withOpacity(0.5), // Adjust opacity as needed
+                spreadRadius: 2, // Spread the shadow outwards
+                blurRadius: 8, // Blur the shadow
+                offset: Offset(0, 0), // Zero offset to apply shadow on all sides
               ),
             ],
           ),
@@ -776,13 +731,14 @@ class CardItem extends StatelessWidget {
       width: 180,
       margin: EdgeInsets.only(left: 20, right: 10),
       decoration: BoxDecoration(
-        color: Colors.white, // Card background color
-        borderRadius: BorderRadius.circular(10), // Card border radius
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3), // Grey shadow color
-            blurRadius: 8, // Shadow blur radius
-            offset: Offset(0, 4), // Shadow offset
+            color: Colors.grey.withOpacity(0.5), // Adjust opacity as needed
+            spreadRadius: 2, // Spread the shadow outwards
+            blurRadius: 8, // Blur the shadow
+            offset: Offset(0, 0), // Zero offset to apply shadow on all sides
           ),
         ],
       ),
