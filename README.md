@@ -1,6 +1,12 @@
 
 # food_delivery_app
 
+
+## Demo Video
+
+[![Everything Is AWESOME](https://github.com/123abhisek/food_delivery_app/blob/main/assets/Food%20Delivery%20App%20Flutter.png)](https://www.youtube.com/watch?v=ZeLfIgcPWSY "Everything Is AWESOME")
+
+
 ![Splash_screen1](https://github.com/user-attachments/assets/d1303f8a-b5b4-40c7-86e5-c4080fa046b5)
 
 ![Splash_screen2](https://github.com/user-attachments/assets/1550ca22-0e7b-442c-8430-1a8bbd684bd7)
@@ -20,10 +26,4 @@
 ![HomePage](https://github.com/user-attachments/assets/18b8d1ae-8b02-4253-bced-315ad82cc7fe)
 
 ![HomePage1](https://github.com/user-attachments/assets/b3717ea5-1078-4757-bc85-ea180d285d9f)
-
-## Demo Video
-
-[![Everything Is AWESOME](https://github.com/123abhisek/food_delivery_app/blob/main/assets/Food%20Delivery%20App%20Flutter.png)](https://www.youtube.com/watch?v=ZeLfIgcPWSY "Everything Is AWESOME")
-
-
 
