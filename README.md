@@ -23,7 +23,7 @@
 
 ## Demo Video
 
-[![Everything Is AWESOME](https://i.sstatic.net/q3ceS.png)](https://www.youtube.com/watch?v=ZeLfIgcPWSY "Everything Is AWESOME")
+[![Everything Is AWESOME](https://github.com/123abhisek/food_delivery_app/blob/main/assets/Food%20Delivery%20App%20Flutter.png)](https://www.youtube.com/watch?v=ZeLfIgcPWSY "Everything Is AWESOME")
 
 
 
